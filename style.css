@@ -1,0 +1,76 @@
+.box-game{
+    background-image: url(Super-Mario-Fundo.jfif);
+    height: 300px;
+    background-size: contain;
+    position: relative;
+}
+
+picture img{
+    height: 60px;
+    width: 60 px;
+}
+
+picture{
+    position: absolute;
+    bottom: 15px;
+}
+
+.mario-boneco{
+    left: 100px;
+}
+
+.obstaculo{
+    right: 1px;
+    animation: andar_obstaculo
+    
+    2s infinite;
+}
+
+.contador{
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 2rem;
+}
+
+.forwards{
+    animation: forwards;
+}
+
+.jump_mario {
+    animation: jump_mario 1s alternate;
+}
+
+.status,button{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 50px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+button{
+    margin: 30px  auto;
+    display: block;
+}
+
+@keyframes andar_obstaculo {
+    to{
+        right: 100%;
+    }
+    from{
+        right: 1px;
+    }
+}
+
+@keyframes jump_mario{
+    from{
+        bottom: 15px;
+    }
+    50%{
+        bottom:120px;
+    }
+    to{
+        bottom:15px;
+    }
+}
